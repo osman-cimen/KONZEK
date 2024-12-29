@@ -1,0 +1,15 @@
+[Unit]
+Description=Simple Python HTTP Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/python_http_server.py
+Restart=always
+User=your_user_name
+Group=your_group_name
+StandardOutput=append:/var/log/python_http_server.log
+StandardError=append:/var/log/python_http_server.log
+
+[Install]
+WantedBy=multi-user.target
+

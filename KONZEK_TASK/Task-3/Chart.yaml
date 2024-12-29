@@ -1,0 +1,5 @@
+apiVersion: v2
+name: python-http-server
+description: A simple Python HTTP server application
+version: 0.1.0
+

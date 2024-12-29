@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-http-server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-http-server
+  template:
+    metadata:
+      labels:
+        app: python-http-server
+    spec:
+      containers:
+        - name: python-http-server
+          image: python-http-server:latest
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: IfNotPresent
+
